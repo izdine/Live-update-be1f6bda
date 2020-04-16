@@ -5,5 +5,11 @@ function myFunction() {
 document.getElementById("Oppervlakte").innerHTML = mynumber.value * mynumber.value * Math.PI * 0.25;
 }
 
- var tijd = new Date();
- document.getElementById("tijd").innerHTML = tijd;
+
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var tijd = new Date();
+  var tijdUpdate = tijd.toLocaleTimeString();
+  document.getElementById("tijd").innerHTML = tijdUpdate;
+}
